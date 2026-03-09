@@ -23,3 +23,18 @@ The gateway acts as a single entry point (Public IP) and routes traffic to speci
 ## 🧪 Verification
 *   Successfully verified **200 OK** responses for both `/images/index.html` and `/video/index.html`.
 *   Handled real-world hurdles including **Regional SKU Capacity** limits and **TLS Security Policy** updates.
+## 📸 Project Results & Proof of Work
+
+### 1. Azure Resources Provisioned
+Below is the screenshot from the Azure Portal showing the full stack (Gateway, VNet, VMs, and NICs) successfully deployed via Terraform.
+
+![Azure Resources](./screenshots/azure-resources.png)
+
+### 2. Path-Based Routing Verification
+The Application Gateway correctly identifies the URL path and routes the traffic to the corresponding backend server.
+
+
+| Path | Browser Response | Description |
+| :--- | :--- | :--- |
+| `/images/*` | ![Images Result](./screenshots/images-result.png) | Traffic routed to the Image Backend Pool |
+| `/video/*` | ![Video Result](./screenshots/video-result.png) | Traffic routed to the Video Backend Pool |
